@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity"
+    android:background="#1e1e23">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/bgHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="header"
+                    android:background="@drawable/header2"/>
+
+                <ImageView
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:layout_below="@+id/bgHeader"
+                    android:layout_marginTop="-130dp"
+                    android:layout_marginRight="-100dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/circlet" />
+
+                <ImageView
+                    android:layout_margin="20dp"
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_previous"
+                    android:onClick="onClick"
+                    android:clickable="true"/>
+
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="6dp"
+                    android:layout_margin="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_pencil"
+                    android:onClick="onClick"
+                    android:clickable="true" />
+
+                <TextView
+                    android:fontFamily="@font/ff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/back"
+                    android:layout_marginLeft="10dp"
+                    android:text="Profile"
+                    android:transitionName="login"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-47dp"
+                android:layout_gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:background="@drawable/stroke_card"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/ff"
+                            android:text="Name"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvName"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/card"
+                            android:drawableRight="@drawable/ic_person"
+                            android:drawablePadding="30dp"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvphone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/name"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/ff"
+                            android:text="Phone Number"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvphone"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/card"
+                            android:drawableRight="@drawable/phone"
+                            android:drawablePadding="30dp"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvEmergency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/phone"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/ff"
+                            android:text="Emergency Contact"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/emergencycontact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvEmergency"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/card"
+                            android:drawableRight="@drawable/phone"
+                            android:drawablePadding="30dp"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/emergencycontact"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/ff"
+                            android:text="Address"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvAddress"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/card"
+                            android:drawableRight="@drawable/location"
+                            android:drawablePadding="30dp"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvHeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/address"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/ff"
+                            android:text="Height"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/height"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvHeight"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/card"
+                            android:drawableRight="@drawable/ic_height"
+                            android:drawablePadding="30dp"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvWeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/height"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/ff"
+                            android:text="Weight"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvWeight"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/card"
+                            android:drawableRight="@drawable/ic_weight2"
+                            android:drawablePadding="30dp"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/weight"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/ff"
+                            android:text="Medical Provider"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/medicalProvider"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvWeight"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/card"
+                            android:drawableRight="@drawable/ic_hospital"
+                            android:drawablePadding="30dp"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvSmoker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/medicalProvider"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/ff"
+                            android:text="Smoker"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/smoker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvSmoker"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/card"
+                            android:drawableRight="@drawable/ic_smoke"
+                            android:drawablePadding="30dp"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvPregnant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/smoker"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/ff"
+                            android:text="Pregnant"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/pregnant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvPregnant"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/card"
+                            android:drawableRight="@drawable/ic_mother"
+                            android:drawablePadding="30dp"
+                            android:inputType="none"
+                            android:padding="10dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

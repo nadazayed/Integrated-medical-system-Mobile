@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SleepActivity"
+    android:background="@drawable/bkground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_previous"
+            android:onClick="onClick"
+            android:clickable="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dream"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:id="@+id/now_txt"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textStyle="bold"
+            android:textColor="#BDBDBD"
+            android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top">
+
+        <TextView
+            android:fontFamily="@font/ff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Going to sleep now?"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Let's get you a sleep cycle"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:layout_gravity=""
+            android:id="@+id/less"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:id="@+id/less_txt"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="»"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unhealthy: You still need more sleep."
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:id="@+id/optimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:id="@+id/optimal_txt"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="»"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Optimal: You're having 7 hours sleep."/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:id="@+id/healthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:id="@+id/healthy_txt"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="»"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Healthy: You're having 8 hours sleep."/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:id="@+id/recommended"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:id="@+id/recommended_txt"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="»"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recommended: You're having 9 hours sleep."/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:id="@+id/more_txt"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="»"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:textColor="#F5F97D"
+                android:textSize="24dp"
+                android:fontFamily="@font/ff"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unhealthy: You're over sleeping."/>
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:fontFamily="@font/ff"
+                android:textColor="#C1C1C1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To feel best you need to sleep 7-9 hours per day\nUnhealthy sleep can lead to chronic sleep deprivation over time"
+                android:textAlignment="center"
+                android:textSize="14dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

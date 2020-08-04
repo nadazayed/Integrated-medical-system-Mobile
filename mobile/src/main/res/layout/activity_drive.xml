@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DriveActivity"
+    android:background="@drawable/bkground" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_previous"
+        android:onClick="onClick"
+        android:clickable="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wheel"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView android:id="@+id/speedo"
+                android:textColor="#00FF00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:drawingCacheQuality="high"
+                android:hapticFeedbackEnabled="true"
+                android:typeface="monospace"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:textSize="210dip">
+            </TextView>
+
+            <TextView android:id="@+id/trip_dist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="----"
+                android:layout_below="@+id/speedo"
+                android:textColor="#FF0000"
+                android:typeface="monospace"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:textSize="90dip"
+                android:layout_alignParentBottom="true"
+                android:paddingTop="20dip"></TextView>
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

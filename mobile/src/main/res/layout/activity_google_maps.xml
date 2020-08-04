@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_up">
+        <EditText
+            android:id="@+id/location_search"
+            android:layout_alignParentLeft="true"
+            android:hint="Specific location?"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:scrollHorizontally="true"
+            android:singleLine="true">
+        </EditText>
+
+        <Button
+            android:id="@+id/search"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:onClick="onClick"
+            android:text="Search">
+        </Button>
+    </LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_below="@+id/relative_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".GoogleMapsActivity" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClick"
+            android:text="Nearby Hospitals"/>
+    </RelativeLayout>
+</RelativeLayout>
